@@ -10,3 +10,5 @@ navigator.geolocation.getCurrentPosition(function(pos) {
     simply.text({ title: "The temp for " + data.name + " is ", subtitle:  Math.round(data.main.temp) + "C"});
   });
 });
+
+simply.vibe('short');
