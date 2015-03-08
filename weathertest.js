@@ -9,6 +9,7 @@ navigator.geolocation.getCurrentPosition(function(pos) {
   ajax({ url: weatherUrl, type: 'json' }, function(data) {
     simply.text({ title: "The temp for " + data.name + " is ", subtitle:  Math.round(data.main.temp) + "C, expect " + data.weather[0].description});
   });
+  return weatherUrl;
 });
 
 Pebble.showSimpleNotificationOnPebble("Today's weather, expect " + weatherUrl.weather[0].description);
