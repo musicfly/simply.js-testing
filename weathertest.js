@@ -8,6 +8,6 @@ navigator.geolocation.getCurrentPosition(function(pos) {
       'lat=' + coords.latitude + '&lon=' + coords.longitude + '&units=metric';
   var temperature = Math.round(data.main.temp) + " C"; 
   ajax({ url: weatherUrl, type: 'json' }, function(data) {
-    simply.text({ title: "The temp for " + data.name + " is ", subtitle:  temperature + " degrees"});
+    simply.text({ title: "The temp for " + data.name + " is ", subtitle:  this.temperature + " degrees"});
   });
 });
