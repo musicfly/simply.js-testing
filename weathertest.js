@@ -6,8 +6,7 @@ navigator.geolocation.getCurrentPosition(function(pos) {
   var coords = pos.coords;
   var weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?' +
       'lat=' + coords.latitude + '&lon=' + coords.longitude + '&units=metric';
-  var temperature = Math.round(data.main.temp) + " C"; 
   ajax({ url: weatherUrl, type: 'json' }, function(data) {
-    simply.text({ title: "The temp for " + data.name + " is ", subtitle:  this.temperature + " degrees"});
+    simply.text({ title: "The temp for " + data.name + " is ", subtitle:  Math.round(data.main.temp) + " degrees"});
   });
 });
