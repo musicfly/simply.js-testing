@@ -11,4 +11,6 @@ navigator.geolocation.getCurrentPosition(function(pos) {
   });
 });
 
+Pebble.showSimpleNotificationOnPebble("Today's weather, expect " + data.weather[0].description);
+
 simply.vibe('short');
