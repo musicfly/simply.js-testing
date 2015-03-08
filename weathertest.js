@@ -1,6 +1,6 @@
 simply.vibe('short');
 simply.title("Today's weather"); 
-simply.text("Today's weather for");
+simply.text("Today's weather is "); 
 
 navigator.geolocation.getCurrentPosition(function(pos) {
   var coords = pos.coords;
