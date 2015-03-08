@@ -13,6 +13,4 @@ navigator.geolocation.getCurrentPosition(function(pos) {
   
 });
 
-Pebble.showSimpleNotificationOnPebble("Today's weather");
-
 simply.vibe('short');
