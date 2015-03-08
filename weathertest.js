@@ -1,5 +1,5 @@
 simply.vibe('short');
-simply.title("Today's temperature for"); 
+simply.title("Today's temperature"); 
 
 
 navigator.geolocation.getCurrentPosition(function(pos) {
@@ -7,6 +7,6 @@ navigator.geolocation.getCurrentPosition(function(pos) {
   var weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?' +
       'lat=' + coords.latitude + '&lon=' + coords.longitude + '&units=metric';
   ajax({ url: weatherUrl, type: 'json' }, function(data) {
-    simply.text({ title: data.name + "is", subtitle: data.main.temp, body: "degrees C"});
+    simply.text({ "The temperature for " + title: data.name + " is", subtitle: data.main.temp, body: "degrees C"});
   });
 });
