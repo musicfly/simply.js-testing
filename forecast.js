@@ -9,7 +9,7 @@ simply.on('singleClick', function(e) {
      var weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?' +
       'lat=' + coords.latitude + '&lon=' + coords.longitude + '&units=metric&cnt=10&mode=json';
      ajax({ url: weatherUrl, type: 'json' }, function(data) {
-      simply.text({ title: data.weather[1].description + data.weather[2].description});
+      simply.text({ title: data.weather[3].description + data.weather[4].description});
   });
   
 });
