@@ -8,6 +8,5 @@ navigator.geolocation.getCurrentPosition(function(pos) {
   ajax({ url: weatherUrl, type: 'json' }, function(data) {
     simply.text({ title: data.name, subtitle: data.main.temp });
   });
-simply.text("degrees C");
 });
 
