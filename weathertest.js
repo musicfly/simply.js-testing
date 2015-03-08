@@ -9,7 +9,7 @@ simply.on('singleClick', function(e) {
       'lat=' + coords.latitude + '&lon=' + coords.longitude + '&units=metric';
      ajax({ url: weatherUrl, type: 'json' }, function(data) {
       simply.text({ title: "Weather for " + data.name + " is ", subtitle: Math.round(data.main.temp) + "C," + " outlook " + data.weather[0].description});
-  }); });
+  }); }); });
   
 simply.on('longClick', function(e) {
     simply.vibe('long');
@@ -21,7 +21,8 @@ simply.on('longClick', function(e) {
       simply.text({ title: "Tomorrow will be " + data.weather[1].description});
     });
 });
-simply.vibe('long');
+});
+
  
 
 
